@@ -1,10 +1,14 @@
 package manager.lesson1
 
-class Calculator constructor(val number:Int):Runnable{
+class Calculator constructor(private val number:Int):Runnable{
+
+    @Volatile private var flag = false
 
     override fun run() {
         for (index in 1 .. 10){
-            println("${Thread.currentThread().name}:$number * $index = ${number * index}")
+            if(!Thread.currentThread().isInterrupted){
+                println("${Thread.currentThread().name}:$number * $index = ${number * index}")
+            }
         }
     }
 }
