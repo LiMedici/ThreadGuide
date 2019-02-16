@@ -1,4 +1,4 @@
-package manager.lessson3
+package chapter1.lesson3
 
 class PrimeGenerator : Thread(){
     override fun run() {

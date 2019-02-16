@@ -1,6 +1,6 @@
-package manager.lesson2
+package chapter1.lesson2
 
-import manager.lesson1.Calculator
+import chapter1.lesson1.Calculator
 import java.io.File
 import java.io.FileWriter
 import java.io.PrintWriter

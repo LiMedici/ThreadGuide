@@ -1,4 +1,4 @@
-package manager.lesson1
+package chapter1.lesson1
 
 class Calculator constructor(private val number:Int):Runnable{
 
