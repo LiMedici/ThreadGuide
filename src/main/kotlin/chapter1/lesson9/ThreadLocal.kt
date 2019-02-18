@@ -4,7 +4,6 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 
 
-
 private class UnSafeTask : Runnable{
 
     private lateinit var startDate:Date
@@ -40,7 +39,7 @@ private class SafeTask : Runnable{
     }
 }
 
-
+// 使用本地线程变量
 fun main(args: Array<String>) {
     // val task = UnSafeTask()
     val task = SafeTask()
