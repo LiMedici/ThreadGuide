@@ -1,5 +1,6 @@
 package chapter1.lesson7
 
+import jdk.nashorn.internal.ir.debug.ObjectSizeCalculator
 import java.util.*
 import java.util.concurrent.*
 
@@ -64,4 +65,18 @@ fun main(args: Array<String>) {
 
     val cleanerTask = CleanerTask(deque)
     cleanerTask.start()
+
+    val char = '国'
+    val english = 'a'
+    val any = Any()
+    val obj = java.lang.Object()
+
+    val utf = "a".toByteArray()
+    val iso88591 = "a".toByteArray(Charsets.ISO_8859_1)
+    println("char size:${ObjectSizeCalculator.getObjectSize(char)}")
+    println("english size:${ObjectSizeCalculator.getObjectSize(english)}")
+    println("any size:${ObjectSizeCalculator.getObjectSize(any)}")
+    println("object size:${ObjectSizeCalculator.getObjectSize(obj)}")
+    println("utf size:${ObjectSizeCalculator.getObjectSize(utf)}")
+    println("iso88591 size:${ObjectSizeCalculator.getObjectSize(iso88591)}")
 }
