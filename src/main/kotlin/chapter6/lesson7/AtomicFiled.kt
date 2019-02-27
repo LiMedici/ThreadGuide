@@ -1,5 +1,6 @@
 package chapter6.lesson7
 
+import java.io.File
 import java.util.concurrent.atomic.AtomicLong
 
 // 为了避免这样的问题，Java引入了原子变量。
