@@ -24,7 +24,6 @@ private class Decrementer(private val vector:AtomicIntegerArray) : Runnable{
 fun main(args: Array<String>) {
     val THERADS = 100
     val vector = AtomicIntegerArray(1000)
-
     val incrementer = Incrementer(vector)
     val decrementer = Decrementer(vector)
 
