@@ -29,7 +29,7 @@ private class MyExecutor(
     override fun beforeExecute(t: Thread?, r: Runnable?) {
         super.beforeExecute(t, r)
         println("MyExecutor:A task is beginning:${t?.name}:${r?.hashCode()})")
-        startTimes.put(r.hashCode().toString(),Date())
+        startTimes.put(r?.hashCode().toString(),Date())
     }
 
     override fun afterExecute(r: Runnable?, t: Throwable?) {
