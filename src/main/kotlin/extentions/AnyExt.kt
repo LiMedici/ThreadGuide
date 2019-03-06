@@ -7,6 +7,13 @@ fun Any.waitK(){
     }
 }
 
+@Throws(InterruptedException::class)
+fun Any.waitK(timeout:Long){
+    if(this is java.lang.Object){
+        this.wait(timeout)
+    }
+}
+
 fun Any.notifyK(){
     if(this is java.lang.Object){
         this.notify()
