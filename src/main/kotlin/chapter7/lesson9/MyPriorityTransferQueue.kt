@@ -90,7 +90,7 @@ private class MyPriorityTransferQueue<E> : PriorityBlockingQueue<E>(),TransferQu
         }else{
             var any = (value as Any)!!
             synchronized(any){
-                value.notifyK()
+                any.notifyK()
             }
         }
 
