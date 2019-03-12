@@ -3,6 +3,7 @@ package chapter8.lesson6
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.locks.ReentrantLock
 // http://findbugs.sourceforge.net/
+// http://code.google.com/p/ multithreadedtc/
 private class Task(private val lock:ReentrantLock) : Runnable{
     override fun run() {
         lock.lock()
